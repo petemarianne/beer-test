@@ -33,3 +33,14 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# IntelliJ project files
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# OS
+.DS_Store
+.idea
+*.iml
