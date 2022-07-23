@@ -1,0 +1,185 @@
+$color1: #ffcd4a;
+$color2: rgba(0, 0, 0, 0.8);
+
+.image-info_wrapper {
+  display: flex;
+  width: 70%;
+  height: 400px;
+  margin: 150px auto 0;
+  justify-content: space-between;
+
+  .image-wrapper {
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+
+    .image {
+      margin-top: 2.5%;
+      max-width: 100%;
+      max-height: 95%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  .info {
+    width: 65%;
+    word-break: break-word;
+    hyphens: auto;
+
+    .name {
+      color: $color1;
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .tagline {
+      color: rgba(255, 205, 74, 0.82);
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    .abv {
+      color: $color2;
+      font-size: 30px;
+      margin-bottom: 45px;
+    }
+
+    .foods {
+      color: $color2;
+      font-size: 30px;
+    }
+
+    .food {
+      color: $color2;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.description {
+  display: flex;
+  width: 70%;
+  margin: 50px auto;
+  color: $color2;
+  font-size: 30px;
+  hyphens: auto;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 1024px) {
+  .image-info_wrapper {
+    .info {
+      .name {
+        font-size: 35px;
+      }
+
+      .tagline {
+        font-size: 30px;
+      }
+
+      .abv {
+        font-size: 30px;
+      }
+
+      .foods {
+        font-size: 30px;
+      }
+
+      .food {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .description {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-info_wrapper {
+    width: 80%;
+
+    .image-wrapper {
+      width: 35%;
+    }
+
+    .info {
+      width: 60%;
+
+      .name {
+        font-size: 30px;
+      }
+
+      .tagline {
+        font-size: 25px;
+      }
+
+      .abv {
+        font-size: 23px;
+      }
+
+      .foods {
+        font-size: 23px;
+      }
+
+      .food {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .description {
+    width: 80%;
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-info_wrapper {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 150px auto 0;
+
+    .image-wrapper {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      width: 100%;
+
+      .name {
+        font-size: 25px;
+      }
+
+      .tagline {
+        font-size: 20px;
+      }
+
+      .abv {
+        font-size: 18px;
+      }
+
+      .foods {
+        font-size: 18px;
+      }
+
+      .food {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .description {
+    width: 80%;
+    font-size: 20px;
+  }
+}

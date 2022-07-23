@@ -1,0 +1,71 @@
+.logo404-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+
+  .four {
+    font-family: ReemKufi, sans-serif;
+    font-size: 230px;
+    color: #ffcd4a;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo404-wrapper {
+    .four {
+      font-size: 170px;
+    }
+  }
+}
+
+.message-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 36px;
+  width: 670px;
+}
+
+@media only screen and (max-width: 720px) {
+  .message-wrapper {
+    font-size: 26px;
+    width: 360px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .message-wrapper {
+    font-size: 20px;
+    width: 300px;
+  }
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 150px;
+  text-decoration: none;
+
+  .go-home-button {
+    width: 250px;
+    height: 40px;
+    background-color: #ffcd4a;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 7px;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .button-wrapper {
+    margin-bottom: 50px;
+
+    .go-home-button {
+      width: 150px;
+    }
+  }
+}

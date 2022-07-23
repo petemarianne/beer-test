@@ -1,0 +1,34 @@
+$color1: #ffcd4a;
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+
+  .input {
+    height: 40px;
+    width: 50%;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: lighter;
+    margin-bottom: 50px;
+    color: rgba(0, 0, 0, 0.7);
+
+    &:focus {
+      outline: none !important;
+      border: 2px solid $color1;
+      box-shadow: 0 0 7px #719ece;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .input {
+      width: 70%;
+    }
+  }
+}
+
+.beers {
+  padding: 0;
+}
