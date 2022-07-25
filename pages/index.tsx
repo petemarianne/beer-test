@@ -37,7 +37,7 @@ const Home: NextPage<{beers: [BeerType]}> = ({ beers }): JSX.Element => {
             if (delayed) {
                 const res = await fetch(`https://api.punkapi.com/v2/beers?page=2&beer_name=${delayed}`);
                 const data = await res.json();
-                if (data.length !== 0) setIsNext(true);
+                setIsNext(data.length !== 0);
             }
         };
 
@@ -59,17 +59,13 @@ const Home: NextPage<{beers: [BeerType]}> = ({ beers }): JSX.Element => {
         document.documentElement.scrollTop = 0;
     };
 
-    const saveBeer = (id: number): void => {
-        localStorage.setItem('beer', JSON.stringify(data[id]));
-    }
-
     return (
         <Layout title={'Beer Search | Main'}>
             <div className={styles['input-wrapper']}>
                 <input type='text' className={styles.input} value={search} onChange={event => setSearch(event.target.value)}/>
             </div>
             <ul className={styles.beers}>
-                {data.map(item => <Link key={item.id} href={'/beer/[id]'} as={`/beer/${item.id}`}><a target='_blank' style={{textDecoration: 'none'}} onClick={() => saveBeer(item.id)}><Beer beer={item}/></a></Link>)}
+                {data.map(item => <Link key={item.id} href={'/beer/[id]'} as={`/beer/${item.id}`}><a target='_blank' style={{textDecoration: 'none'}}><Beer beer={item}/></a></Link>)}
             </ul>
             {!isNext || (first === 1 && data.length < 25) ? null :
                 <Pagination
